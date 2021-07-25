@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title></title>
+	<title>Bubble Factory Test Lab</title>
 </head>
 <body>
 	<script type="text/javascript">
@@ -13,7 +13,7 @@
 					 41,53,55,61,51,44];
 		var output;
 		var bestSolutions = [];
-		var maxScore;
+		var highScore;
 
 		function printAndGetHighScore(scores){
 
@@ -22,14 +22,14 @@
 				output = "Bubble solution #" + i + " score " + scores[i];
 				console.log(output);
 			}
-			maxScore = Math.max(...scores);
-			return(maxScore);
+			highScore = Math.max(...scores);
+			return(highScore);
 		}
 
-		function getBestResult(scores, maxScore){
+		function getBestResult(scores, highScore){
 
 			for (var i = 0; i < scores.length; i++){
-				if (scores[i] === maxScore){
+				if (scores[i] === highScore){
 					bestSolutions.push(i);
 				}
 			}
@@ -37,14 +37,10 @@
 		}
 
 
-
-//		console.log("Highest bubble score: " + maxScore);
-
-
-		console.log(printAndGetHighScore(scores));
-		console.log("Solutions with higheest score: " + getBestResult(scores, maxScore));
-
-
+		var highScore = printAndGetHighScore(scores);
+		console.log("Bubble tests: " + scores.length);
+		console.log("Highest bubble score: " + highScore);
+		console.log("Solutions with highest score: " + getBestResult(scores, highScore));
 
 	</script>
 </body>
