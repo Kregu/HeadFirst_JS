@@ -77,7 +77,7 @@ var model = {
 			var ship = this.ships[i];
 
 			for (var j = 0; j < locations.length; j++) {
-				if (ship.locations.indexOf(locations[j]) >= 0) {
+				if (ship.locations.includes(locations[j])) {
 					return true;
 				}
 			}
