@@ -1,3 +1,5 @@
+window.onload = init;
+
 var view = {
 	displayMessage: function(msg) {
 		var messageArea = document.getElementById("messageArea");
@@ -116,5 +118,7 @@ function init() {
 	fireButton.onclick = handleFireButton;
 }
 function handleFireButton() {
+	var guessInput = document.getElementById("guessInput");
+	var guess = guessInput.value;
 
 }
