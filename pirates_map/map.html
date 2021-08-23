@@ -5,13 +5,12 @@
   <title>Pirates Booty</title>
   <script>
 	window.onload = init;
+	
 	function init() {
 		map.onmousemove = showCoords
-	}
+	}	
 
-	
 	function showCoords(eventObj) {
-		console.log(eventObj)
 		var map = document.getElementById("coords");
 		map.innerHTML = `Coorditates: ${eventObj.clientX}, ${eventObj.clientY}`
 	}
