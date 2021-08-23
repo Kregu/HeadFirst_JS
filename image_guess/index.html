@@ -12,7 +12,6 @@
     <script>
         window.onload = init;
         function init(eventObj) {
-            console.log(eventObj)
             var images = document.getElementsByTagName("img");
             for ( var image of images) {
                 image.onclick = showAnswer
@@ -20,10 +19,13 @@
         }
             
         function showAnswer(eventObj){
-            console.log(eventObj)
-            image = eventObj.target;                    
+            var image = eventObj.target;
             image.src = image.id + ".jpg"
+            setTimeout(hideAnswer, 2000, image)
         };
+        function hideAnswer(image) {
+            image.src = image.id + "blur.jpg";
+        }
     </script>
 
 
