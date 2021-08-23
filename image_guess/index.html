@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {margin: 20px}
+        img {margin: 20px;}
+
+    </style>
+    <script>
+        window.onload = init;
+        function init(eventObj) {
+            console.log(eventObj)
+            var images = document.getElementsByTagName("img");
+            for ( var image of images) {
+                image.onclick = showAnswer
+            }
+        }
+            
+        function showAnswer(eventObj){
+            console.log(eventObj)
+            image = eventObj.target;                    
+            image.src = image.id + ".jpg"
+        };
+    </script>
+
+
+</head>
+<body>
+    <img src="zeroblur.jpg" alt="" id="zero">
+    <img src="oneblur.jpg" alt="" id="one">
+    <img src="twoblur.jpg" alt="" id="two">
+    <img src="threeblur.jpg" alt="" id="three">
+    <img src="fourblur.jpg" alt="" id="four">
+    <img src="fiveblur.jpg" alt="" id="five">
+    
+</body>
+</html>
