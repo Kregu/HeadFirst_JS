@@ -15,15 +15,19 @@
             var images = document.getElementsByTagName("img");
             for ( var image of images) {
                 image.onclick = showAnswer
+                image.onmouseover = showAnswer
+                image.onmouseout = hideAnswer
+
             }
         }
             
         function showAnswer(eventObj){
             var image = eventObj.target;
             image.src = image.id + ".jpg"
-            setTimeout(hideAnswer, 2000, image)
+            setTimeout(hideAnswer, 2000, eventObj)
         };
-        function hideAnswer(image) {
+        function hideAnswer(eventObj) {
+            var image = eventObj.target;
             image.src = image.id + "blur.jpg";
         }
     </script>
