@@ -28,17 +28,26 @@ spot.bark = function (){
     console.log(this.name + " says Wof!")
 }
 
-fido.bark()
-fido.run()
-fido.wag()
+const barnaby = new Dog("Barnaby", "Basset Hound", 55);
 
-fluffy.bark()
-fluffy.run()
-fluffy.wag()
+Dog.prototype.sit = function () {
+    console.log(this.name + " is now sitting.")
+}
 
-spot.bark()
-spot.run()
-spot.wag()
+barnaby.sit()
+fido.sit()
+
+// fido.bark()
+// fido.run()
+// fido.wag()
+//
+// fluffy.bark()
+// fluffy.run()
+// fluffy.wag()
+//
+// spot.bark()
+// spot.run()
+// spot.wag()
 
 
 
