@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click me!</title>
+    <style>
+        body, button {margin: 10px;}
+        div {padding: 10px;}
+    </style>
+</head>
+<body>
+<button id="button">Click me!</button>
+<div id="message"></div>
+
+<script>window.onload = function () {
+
+    function makeCount() {
+        a = 0;
+        return () => ++a;
+    }
+
+    count = makeCount();
+    const div = document.getElementById("message")
+    const button = document.getElementById("button")
+
+    button.onclick = () => div.innerHTML = `You clicked me ${count()} times!`
+}
+</script>
+
+</body>
+</html>
